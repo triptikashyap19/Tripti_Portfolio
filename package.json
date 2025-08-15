@@ -6,6 +6,7 @@
   "scripts": {
     "test": "nil",
     "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode=production",
+    "postbuild": "mkdir -p public/src && cp -f src/style.css public/src/ 2>/dev/null || true && cp -R src/fonts public/src/ 2>/dev/null || true && cp -R src/images public/src/ 2>/dev/null || true && cp -f src/worker-physics.js public/src/ 2>/dev/null || true && cp -R src/libs public/src/ 2>/dev/null || true",
     "start": "webpack-dev-server --inline --host 0.0.0.0"
   },
   "author": "",
