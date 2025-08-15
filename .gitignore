@@ -21,3 +21,4 @@ coverage/
 .idea/
 .env
 .env.*
+git-filter-repo/
