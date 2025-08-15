@@ -1,4 +1,5 @@
 /* Configure HTMLWebpack plugin */
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
     template: __dirname + '/src/index.html',
@@ -20,7 +21,7 @@ module.exports = {
     // devtool: "inline-source-map",
     entry: "./src/main.ts",
     output: {
-        path: __dirname,
+        path: path.resolve(__dirname, 'public'),
         filename: "main.built.js"
     },
     node: { fs: 'empty' },
